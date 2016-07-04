@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Home</title>
+  
+    <!-- CSS  -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300,500,700,500italic,400italic,300italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/style.css" type="text/css" rel="stylesheet"/>
+  <link href="css/responsive.css" type="text/css" rel="stylesheet"/>
+  <link href="css/weathericons.css" type="text/css" rel="stylesheet"/>
+    
+  <!-- @ Scripts @ -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  
+</head>
+
+<!-- @ BODY @ -->
+<body>
+
+  <div class="row">
+
+<!-- # KOLUMNA 1 # -->
+    <div class="col s12 m6 l3">
+	  <div class="card teal-color">
+	  <div class="row">
+	    <div class="col s2">
+		  <div class="card-content">
+		    <div class="card-content-l">
+			<br>
+			<br>
+			<br>
+			<br>
+		    </div>
+		  </div>
+		</div>
+	    <div class="col s5">
+		  <div class="card-content">
+		    <div class="card-content-l">
+  		      <div id="clock"></div>
+		      <div id="date"></div>
+			</div>
+		  </div>
+		</div>
+		<div class="col s5">
+		
+		</div>
+	  </div>
+	  </div>
+	  
+    </div>
+
+<!-- # KOLUMNA 2 # -->
+	<div class="col s12 m6 l3">
+	
+	  <div id="weather" class="card pink-color">
+	    <div class="card-title">POGODA</div>
+		<div class="row">
+		  <div class="card-content">
+		    <div class="card-content-l col s7">
+			  <div class="row">
+  		        <div id="weather_temp" class="col s6"></div>
+		        <div id="weather_icon" class="col s6"></div>
+			  </div>
+			  <button onclick="getWeather();" class="card-button">Odśwież pogodę</button>
+		    </div>
+			<div class="card-content-r col s5">
+			  <div class="row">
+			    
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+    </div>
+
+<!-- # KOLUMNA 3 # -->	
+	<div class="col s12 m6 l3">
+    
+	</div>
+	
+  </div>
+</body>
+</html>
