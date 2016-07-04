@@ -53,3 +53,14 @@ function getWeather()
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 }
+
+function cardExpand(id)
+{
+	var card = document.getElementById(id).innerHTML;
+	if (card.startsWith('<!--'))
+	{
+		document.getElementById(id).innerHTML = card.substring(4, card.length - 3);
+	}
+	else
+		document.getElementById(id).innerHTML = '<!--' + card + '-->';
+}

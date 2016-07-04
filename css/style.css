@@ -30,45 +30,59 @@
 
 body {
   font-family: 'Roboto Mono' !important;
-  background-image: url("../img/pattern.png");
+  background-color: #fafafa;
   font-weight: normal;
 }
 
 #clock { font-size: 28px; font-weight: bold; }
-#date { font-size: 14px; font-weight: 200; }
-#weather_temp { font-size: 48px; font-weight: 200; }
-#weather_temp2 { font-size: 18px; font-weight: 200; }
-#weather_icon { font-size: 32px; }
-#weather_icon2 { font-size: 18px; margin-left: 5px; }
+#date { font-size: 14px; font-weight: 300; }
+#weather_temp { font-size: 48px; font-weight: 300; padding: none; }
+#weather_icon { font-size: 32px; padding: none; }
 
 .card {
   position: relative;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.5rem 0 1.5rem 0;
   border-radius: 2px;
   text-align: center;
-  transition: box-shadow .25s;
+  color: #fff;
+  transition: all .25s;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  padding: 10px;
+}
+
+.card .con1{
+}
+
+.card .con2{
+  background-color: #fff;
+  color: #444;
 }
 
 .card-title {
-  color: #fff;
+  border-radius: 2px;
+  padding: 10px 10px 0 10px;
+  text-align: left;
   font-size: 36px;
-  font-weight: bold;
-  border-bottom: 2px solid #fff;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.card-content {
-  color: #fff;
-  margin-top: 20px;
+.card-title .material-icons{
+  font-size: 36px;
 }
 
-.card-content-l { 
-  border-right: 1px solid #fff;
+.card-title:hover {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
-.card-content-r { 
-  
+.card-title:active {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+button .material-icons{
+  font-size: 24px;
+  font-weight: 200;
 }
 
 .card-button {
@@ -76,6 +90,7 @@ body {
   margin: 0;
   box-shadow: none;
   border-radius: 2px;
+  text-align: center;
 }
 
 .card-button:hover {
@@ -91,7 +106,6 @@ button {
   position: relative;
   border: none;
   outline:none;
-  position: relative;
   overflow: hidden;
   cursor: pointer;
   padding: 8px 15px;
@@ -102,10 +116,6 @@ button {
 
 button:hover {
   box-shadow: 0 5px  11px 0 rgba(0, 0, 0, 0.18), 0 4px  15px 0 rgba(0, 0, 0, 0.15);
-}
-
-p {
-	margin: 0;
 }
 
 /* RIPPLE START */
