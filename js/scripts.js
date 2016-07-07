@@ -29,8 +29,8 @@ function setClock()
 	if(m < 10) m = "0" + m;
 	if(s < 10) s = "0" + s;
 
-	document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
-	document.getElementById("date").innerHTML = days[d] + ", " + D + " " + months[M];
+	document.getElementById("clock").innerHTML = "<h6>" + h + ":" + m + ":" + s + "</h6>";
+	document.getElementById("date").innerHTML = "<h2>" + days[d] + ", " + D + " " + months[M] + "</h2>";
 	setTimeout("setClock()",1000);
 }
 
@@ -52,15 +52,4 @@ function getWeather()
 
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
-}
-
-function cardExpand(id)
-{
-	var card = document.getElementById(id).innerHTML;
-	if (card.startsWith('<!--'))
-	{
-		document.getElementById(id).innerHTML = card.substring(4, card.length - 3);
-	}
-	else
-		document.getElementById(id).innerHTML = '<!--' + card + '-->';
 }

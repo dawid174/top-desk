@@ -27,49 +27,25 @@
     <div class="col s12 m6 l3">
 	
 	<!-- # ZEGAR # -->
-	  <div class="card teal-color">
-	    <div onclick="cardExpand('cardClock')" class="card-title"><i class="material-icons">watch_later</i><i class="material-icons">event</i></div>
-	    <div id="cardClock" class="con1">
-	      <div class="row">
-	        <div class="col s12">
-		      <div id="clock"></div>
-		      <div id="date"></div>
-		    </div>
-	      </div>
-	    </div>
-		<div class="con2">
-		  <div class="row">
-		    <div class="col s12">
-			  ABCDEFGHIJ
-			</div>
+	  <div class="card">
+	    <div id="cardClock" class="row">
+	      <div class="col s12">
+	        <div id="clock"></div>
+		    <div id="date"></div>
 		  </div>
-		</div>
+        </div>
 	  </div>
-
 
     </div>
 
 <!-- # KOLUMNA 2 # -->
 	<div class="col s12 m6 l3">
 	
-	  <div id="weather" class="card pink-color">
-	    <div onclick="cardExpand('cardWeather');" class="card-title">
-		  <i class="material-icons">wb_sunny</i>
-		</div>
-		<div onclick="getWeather();" id="cardWeather" class="row">
-		  <div class="card-content">
-		    <div class="card-content-l col s7">
-			  <div class="row">
-  		        <div id="weather_temp" class="col s6"></div>
-		        <div id="weather_icon" class="col s6"></div>
-			  </div>
-		    </div>
-			<div class="card-content-r col s5">
-			  <div class="row">
-			    
-			  </div>
-			</div>
-		  </div>
+	<!-- # POGODA # -->
+	  <div class="card">
+		<div onclick="getWeather();" class="row">
+	      <div id="weather_temp" class="col s6"></div>
+	      <div id="weather_icon" class="col s6"></div>
 		</div>
 	  </div>
 	  
