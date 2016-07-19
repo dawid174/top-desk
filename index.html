@@ -9,8 +9,6 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300,500,700,500italic,400italic,300italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/style.css" type="text/css" rel="stylesheet"/>
-  <link href="css/responsive.css" type="text/css" rel="stylesheet"/>
-  <link href="css/weathericons.css" type="text/css" rel="stylesheet"/>
     
   <!-- @ Scripts @ -->
   <script type="text/javascript" src="js/jquery.js"></script>
@@ -21,41 +19,26 @@
 <!-- @ BODY @ -->
 <body>
 
-  <div class="row">
-
-<!-- # KOLUMNA 1 # -->
-    <div class="col s12 m6 l3">
-	
-	<!-- # ZEGAR # -->
-	  <div class="card">
-	    <div id="cardClock" class="row">
-	      <div class="col s12">
-	        <div id="clock"></div>
-		    <div id="date"></div>
-		  </div>
-        </div>
-	  </div>
-
-    </div>
-
-<!-- # KOLUMNA 2 # -->
-	<div class="col s12 m6 l3">
-	
-	<!-- # POGODA # -->
-	  <div class="card">
-		<div onclick="getWeather();" class="row">
-	      <div id="weather_temp" class="col s6"></div>
-	      <div id="weather_icon" class="col s6"></div>
-		</div>
-	  </div>
-	  
-    </div>
-
-<!-- # KOLUMNA 3 # -->	
-	<div class="col s12 m6 l3">
-    
-	</div>
-	
+<!-- # ZEGAR # -->
+<div class="card">
+  <div class="card-content">
+	<span id="clock"></span>
+	<span id="date" class="text-def"></span>
   </div>
+</div>
+
+<!-- # POGODA # -->
+<div class="card">
+  <div class="card-content">
+    <img id="weather_icon" src="img/weather/na.png">
+	<span id="weather_temp"></span>
+	<span id="weather_con" class="text-def"></span>
+  </div>
+  <div class="divider"></div>
+  <div class="card-action">
+    <button onclick="getWeather();">Odśwież</button>
+  </div>
+</div>
+
 </body>
 </html>

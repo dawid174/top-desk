@@ -2,11 +2,11 @@ window.onload = init_JS;
 
 var days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
 var months = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"];
-var weatherArray = ["na", "wind", "wind", "cloud-flash", "cloud-flash", "snow", "rain", "snow", "drizzle", "drizzle",
-					"windy-rain", "drizzle", "drizzle", "snow-heavy", "snow", "snow-heavy", "snow", "hail", "snow", "wind",
-					"fog", "mist", "mist", "mist", "wind", "temperature", "cloud", "cloud-moon", "clouds", "cloud-moon",
-					"cloud", "moon", "sun", "moon", "sun", "rain", "sun", "cloud-flash", "cloud-flash", "cloud-flash",
-					"hail", "snow-heavy", "snow", "snow-heavy", "cloud", "cloud-flash", "snow", "cloud-flash", "na"];
+var weatherArray = ["na", "Windy", "Windy", "thunderstorms", "thunderstorms", "sleet", "sleet", "sleet", "rain_light", "rain_light",
+					"rain_heavy", "rain_light", "rain_light", "snow", "snow_light", "snow", "snow", "sleet", "sleet", "Windy",
+					"fog", "mist", "mist", "mist", "Windy", "na", "cloudy", "cloudy", "cloudy", "partly_cloudy",
+					"partly_cloudy", "sunny", "sunny", "sunny", "sunny", "rain_light", "sunny", "thunderstorms", "thunderstorms", "rain_light",
+					"rain_light", "snow", "snow_light", "snow", "partly_cloudy", "thunderstorms", "snow_light", "thunderstorms", "na"];
 
 function init_JS()
 {
@@ -30,7 +30,7 @@ function setClock()
 	if(s < 10) s = "0" + s;
 
 	document.getElementById("clock").innerHTML = "<h6>" + h + ":" + m + ":" + s + "</h6>";
-	document.getElementById("date").innerHTML = "<h2>" + days[d] + ", " + D + " " + months[M] + "</h2>";
+	document.getElementById("date").innerHTML = days[d] + ", " + D + " " + months[M];
 	setTimeout("setClock()",1000);
 }
 
@@ -42,11 +42,9 @@ function getWeather()
 	xmlhttp.onreadystatechange = function() {
 	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			var json = JSON.parse(xmlhttp.responseText);
-			var wTemp = parseFloat(json.query.results.channel.item.condition.temp);
-			var wCode = parseFloat(json.query.results.channel.item.condition.code);
-			
-			document.getElementById("weather_temp").innerHTML = wTemp + "°";
-			document.getElementById("weather_icon").innerHTML = '<i class="icon-' + weatherArray[wCode] + '"></i>';
+			document.getElementById("weather_temp").innerHTML = '<h6>' + json.query.results.channel.item.condition.temp + '°</h6>';
+			document.getElementById("weather_icon").setAttribute("src", "img/weather/" + weatherArray[json.query.results.channel.item.condition.code] + ".png");
+			document.getElementById("weather_con").innerHTML = json.query.results.channel.item.condition.text;
 		}
 	};
 
